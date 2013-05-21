@@ -155,6 +155,8 @@ loop do
 		tmatrix.tighten_spiral
 		tmatrix.print_spiral
 		break		
+	else
+		tmatrix = nil
 	end
 end
 
