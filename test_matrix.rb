@@ -1,4 +1,4 @@
-class SpiralMatrix
+class TMatrix
 	@number
 	@sqr = nil
 	@matrix = nil
@@ -21,18 +21,29 @@ class SpiralMatrix
 	#проверка условия для построения матрицы
 	def checking_condition
 		if (@number > 0) && (Math.sqrt(@number) == Math.sqrt(@number).truncate)
-			@sqr = Math.sqrt(@number)
 			return = true
 		else
 			return = false
 		end
 	end
 
+	#двигаемся по спирали вправо вставляя значения
+	def move_to_right (value)
+
+	end
+
 	#закрутить спираль
 	def tighten_spiral
-		@matrix = Array.new(@sqr, nil)
+		@sqr = Math.sqrt(@number) #извлекаем корень
+		@matrix = Array.new(@sqr, nil) #мссив для результата
+		
+		1.upto(@number) do |val|
+		end
 	end
 end
+
+
+
 
 def test_matrix
 	a = gets.to_i
