@@ -29,8 +29,7 @@ def test_matrix
 					indr-=1 #сдвигаем индекс на еденицу назад
 					row+=1 #переходим на следующую строку
 				end
-			else
-				if (rotate == 1) && (direct ==1) && (row <= indd) then
+			elsif (rotate == 1) && (direct ==1) && (row <= indd) then
 					matrix[row][col] = x
 					row+=1 #двигаемся вниз
 
@@ -41,8 +40,7 @@ def test_matrix
 						col-=1 #т.к. колонка уже занята
 						indd-=1
 					end
-				else
-					if (rotate ==0) && (direct == 2) && (col >= indl) then
+				elsif (rotate ==0) && (direct == 2) && (col >= indl) then
 						matrix[row][col] = x
 						col-=1
 
@@ -53,8 +51,7 @@ def test_matrix
 							row-=1
 							indl+=1
 						end	
-					else
-						if (rotate == 1) && (direct == 3) && (row >= indu) then
+					elsif (rotate == 1) && (direct == 3) && (row >= indu) then
 							matrix[row][col] = x
 							row-=1
 
