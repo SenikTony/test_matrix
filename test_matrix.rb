@@ -30,41 +30,38 @@ def test_matrix
 					row+=1 #переходим на следующую строку
 				end
 			elsif (rotate == 1) && (direct ==1) && (row <= indd) then
-					matrix[row][col] = x
-					row+=1 #двигаемся вниз
+				matrix[row][col] = x
+				row+=1 #двигаемся вниз
 
-					if (row > indd) then
-						rotate = 0
-						direct = 2
-						row-=1
-						col-=1 #т.к. колонка уже занята
-						indd-=1
-					end
-				elsif (rotate ==0) && (direct == 2) && (col >= indl) then
-						matrix[row][col] = x
-						col-=1
+				if (row > indd) then
+					rotate = 0
+					direct = 2
+					row-=1
+					col-=1 #т.к. колонка уже занята
+					indd-=1
+				end
+			elsif (rotate ==0) && (direct == 2) && (col >= indl) then
+				matrix[row][col] = x
+				col-=1
 
-						if (col < indl) then
-							rotate = 1
-							direct = 3
-							col+=1
-							row-=1
-							indl+=1
-						end	
-					elsif (rotate == 1) && (direct == 3) && (row >= indu) then
-							matrix[row][col] = x
-							row-=1
-
-							if (row < indu) then
-								rotate = 0
-								direct = 0
-								row+=1
-								col+=1
-								indu+=1
-							end
-						end
-					end
+				if (col < indl) then
+					rotate = 1
+					direct = 3
+					col+=1
+					row-=1
+					indl+=1
 				end	
+			elsif (rotate == 1) && (direct == 3) && (row >= indu) then
+				matrix[row][col] = x
+				row-=1
+
+				if (row < indu) then
+					rotate = 0
+					direct = 0
+					row+=1
+					col+=1
+					indu+=1
+				end
 			end
 		end
 		matrix.each do |y|
