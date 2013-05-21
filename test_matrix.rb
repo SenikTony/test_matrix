@@ -1,3 +1,39 @@
+class SpiralMatrix
+	@number
+	@sqr = nil
+	@matrix = nil
+
+	@rotate = 0	#поворот 0 - горизонт.; 1 - вертикально.
+	@direct = 0	#направление 0-вправо; 1-вниз; 2-лево; 3-вверх
+
+	@col = 0 	#колонки
+	@row = 0 	#строки
+
+	@indr = b-1	#крайний индекс право верх
+	@indd = b-1
+	@indl = 0
+	@indu = 1 	#т.к. первая строка уже занята
+
+	def initialize (number)
+		@number = number
+	end
+
+	#проверка условия для построения матрицы
+	def checking_condition
+		if (@number > 0) && (Math.sqrt(@number) == Math.sqrt(@number).truncate)
+			@sqr = Math.sqrt(@number)
+			return = true
+		else
+			return = false
+		end
+	end
+
+	#закрутить спираль
+	def tighten_spiral
+		@matrix = Array.new(@sqr, nil)
+	end
+end
+
 def test_matrix
 	a = gets.to_i
 	if (a > 0) && (Math.sqrt(a) == Math.sqrt(a).truncate) then
