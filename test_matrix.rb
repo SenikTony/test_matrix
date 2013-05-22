@@ -89,8 +89,8 @@ class TMatrixTightenSpiral
 
 		#сдвиг влево
 		def shift_left
-			@row-=1
 			@col-=1 #т.к. колонка уже занята
+			@row-=1
 			@indd-=1
 		end
 
@@ -103,8 +103,8 @@ class TMatrixTightenSpiral
 
 		#сдвиг вправо
 		def shift_right
-			@row+=1
 			@col+=1
+			@row+=1
 			@indu+=1		
 		end
 
