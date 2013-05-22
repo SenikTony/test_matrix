@@ -18,15 +18,6 @@ class TMatrix
 		@number = number
 	end
 
-	#проверка условия для построения матрицы
-	def checking_condition
-		if (@number > 0) && (Math.sqrt(@number) == Math.sqrt(@number).truncate)
-			return = true
-		else
-			return = false
-		end
-	end
-
 	private
 	#поворот, поворачиваем спираль и задам направление
 	def rotation
@@ -118,6 +109,16 @@ class TMatrix
 	end
 
 	public
+
+	#проверка условия для построения матрицы
+	def checking_condition
+		if (@number > 0) && (Math.sqrt(@number) == Math.sqrt(@number).truncate)
+			true
+		else
+			false
+		end
+	end
+	
 	#закрутить спираль
 	def tighten_spiral
 		@sqr = Math.sqrt(@number) #извлекаем корень
