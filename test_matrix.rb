@@ -50,7 +50,7 @@ class TMatrixTightenSpiral
 					move_to_down (val)
 				elsif (@rotate ==0) && (@direct == 2) && (@col >= @indl)
 					move_to_left (val)
-				elsif (@rotate == 1) && (@direct == 3) && (@row >= indu)
+				elsif (@rotate == 1) && (@direct == 3) && (@row >= @indu)
 					move_to_up (val)
 				end
 			end
